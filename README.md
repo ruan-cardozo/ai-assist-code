@@ -387,5 +387,3 @@ O uso da CodiumAI demonstrou um aumento significativo na produtividade, especial
 A CodiumAI oferece uma excelente solução para automação de tarefas no ciclo de vida de desenvolvimento, com um foco em produtividade e segurança. O uso desta ferramenta pode auxiliar equipes de desenvolvimento a melhorar a qualidade e a segurança de seus projetos, desde que o código gerado seja revisado e ajustado conforme necessário.
 
 ---
-
-Esse README pode ser adaptado conforme a execução prática da atividade e as observações específicas que forem surgindo.
