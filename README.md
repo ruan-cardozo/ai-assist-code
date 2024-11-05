@@ -361,12 +361,42 @@ Codium foi utilizada para criar um novo recurso de crud de usuário sem autentic
 Foi configurado um pipeline de CI/CD automático, incluindo as etapas de build, teste e deploy. A Codium gerou configurações automáticas para parte do processo, auxiliando na automação do deploy.
 
 **Configuração do Pipeline:**
-```
-// Inserir parte da configuração do pipeline gerada
-```
+```yml
+version: 2.1
 
-#### 3.6 Deploy Automatizado
-Após a configuração do pipeline, o deploy foi executado em um ambiente de teste (Docker/container/nuvem). A Codium otimizou alguns aspectos da configuração, garantindo uma implementação mais eficiente.
+jobs:
+  build-and-test:
+    docker:
+    - image: circleci/node:14
+
+    steps:
+    - checkout
+    - run: npm install
+    - run: npm run build
+    - run: npm run test
+
+  deploy:
+    docker:
+    - image: circleci/node:14
+
+    steps:
+    - checkout
+    - run: npm install
+    - run: npm run build
+    - run: npm run deploy
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+    - build-and-test
+    - deploy:
+        requires:
+        - build-and-test
+        filters:
+          branches:
+            only: main
+```
 
 ### 4. Resultados Obtidos
 Documentamos as principais observações em cada etapa:
@@ -374,16 +404,16 @@ Documentamos as principais observações em cada etapa:
 - **Qualidade de Código:** Foram aplicadas sugestões de refatoração que melhoraram a legibilidade e eficiência.
 - **Segurança:** A CodiumAI foi eficaz em detectar vulnerabilidades comuns e propor correções.
 - **Programação Assistida:** O código gerado foi útil, mas exigiu algumas adaptações manuais para melhor adequação ao projeto.
+    - **Vai ter retrabalho para o código que ele mesmo fez.** 
 - **Pipeline de CI/CD:** A ferramenta simplificou a configuração inicial, automatizando o processo de deploy com eficiência.
 
 ### 5. Benefícios e Limitações da Ferramenta
 - **Benefícios:** Automação de tarefas repetitivas, detecção de vulnerabilidades, geração de código e sugestões de melhorias.
-- **Limitações:** Algumas sugestões geradas exigem revisão manual para adequação ao contexto do projeto.
+- **Limitações:** Algumas sugestões geradas exigem revisão manual para adequação ao contexto do projeto e tambem correção manual nem sempre os códigos gerados por ele são os melhores e com as melhores práticas.
 
 ### 6. Reflexão Crítica
-O uso da CodiumAI demonstrou um aumento significativo na produtividade, especialmente na fase de verificação de segurança e programação assistida. No entanto, percebemos a necessidade de revisão e ajuste do código gerado em certos cenários, o que ressalta a importância de uma supervisão humana contínua.
+O uso da Codium demonstrou um aumento significativo na produtividade, especialmente na fase de verificação de segurança e programação assistida. No entanto, percebemos a necessidade de revisão e ajuste do código gerado em certos cenários, o que ressalta a importância de uma supervisão humana contínua.
 
 ### 7. Conclusão
-A CodiumAI oferece uma excelente solução para automação de tarefas no ciclo de vida de desenvolvimento, com um foco em produtividade e segurança. O uso desta ferramenta pode auxiliar equipes de desenvolvimento a melhorar a qualidade e a segurança de seus projetos, desde que o código gerado seja revisado e ajustado conforme necessário.
-
+A Codium oferece uma excelente solução para automação de tarefas no ciclo de vida de desenvolvimento, com um foco em produtividade e segurança. O uso desta ferramenta pode auxiliar equipes de desenvolvimento a melhorar a qualidade e a segurança de seus projetos, desde que o código gerado seja revisado e ajustado conforme necessário.
 ---
