@@ -4,13 +4,18 @@
   "description": "## Ferramenta Escolhida: Codium",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.1",
-    "mongodb": "^6.10.0"
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }

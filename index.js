@@ -1,67 +1,81 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
 const app = express();
-const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017';
-const dbName = 'mydatabase';
+const url = 'mongodb://172.19.0.2:27017/mydatabase';
 
 app.use(express.json());
+app.use(cors());
 
-// Conectar ao banco de dados
-MongoClient.connect(url, function(err, client) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('Conectado ao banco de dados!');
-    const db = client.db(dbName);
+app.use((req, res, next) => {
+    console.log(`Recebida requisição ${req.method} para ${req.url}`);
+    next();
+});
 
-    // CRUD
-    app.post('/users', (req, res) => {
+// Conectar ao banco de dados usando Mongoose
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('Conectado ao banco de dados com Mongoose!');
+    })
+    .catch(err => {
+        console.log('Erro ao conectar ao banco de dados:', err);
+    });
+
+// Definir o modelo de usuário
+const userSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    // Adicione outros campos conforme necessário
+});
+
+const User = mongoose.model('User', userSchema);
+
+// CRUD
+app.post('/users', (req, res) => {
     console.log('Requisição POST recebida');
-      const user = req.body;
-      db.collection('users').insertOne(user, (err, result) => {
-        if (err) {
-          res.status(500).send({ message: 'Erro ao criar usuário' });
-        } else {
-          res.send({ message: 'Usuário criado com sucesso' });
-        }
-      });
-    });
+    const user = new User(req.body);
+    user.save()
+        .then(() => {
+            res.send({ message: 'Usuário criado com sucesso' });
+        })
+        .catch(err => {
+            res.status(500).send({ message: 'Erro ao criar usuário' });
+        });
+});
 
-    app.get('/users', (req, res) => {
-      db.collection('users').find().toArray((err, users) => {
-        if (err) {
-          res.status(500).send({ message: 'Erro ao listar usuários' });
-        } else {
-          res.send(users);
-        }
-      });
-    });
+app.get('/users', (req, res) => {
+    User.find()
+        .then(users => {
+            res.send(users);
+        })
+        .catch(err => {
+            res.status(500).send({ message: 'Erro ao listar usuários' });
+        });
+});
 
-    app.put('/users/:id', (req, res) => {
-      const id = req.params.id;
-      const user = req.body;
-      db.collection('users').updateOne({ _id: ObjectId(id) }, { $set: user }, (err, result) => {
-        if (err) {
-          res.status(500).send({ message: 'Erro ao atualizar usuário' });
-        } else {
-          res.send({ message: 'Usuário atualizado com sucesso' });
-        }
-      });
-    });
+app.put('/users/:id', (req, res) => {
+    const id = req.params.id;
+    User.findByIdAndUpdate(id, req.body, { new: true })
+        .then(user => {
+            res.send({ message: 'Usuário atualizado com sucesso', user });
+        })
+        .catch(err => {
+            res.status(500).send({ message: 'Erro ao atualizar usuário' });
+        });
+});
 
-    app.delete('/users/:id', (req, res) => {
-      const id = req.params.id;
-      db.collection('users').deleteOne({ _id: ObjectId(id) }, (err, result) => {
-        if (err) {
-          res.status(500).send({ message: 'Erro ao deletar usuário' });
-        } else {
-          res.send({ message: 'Usuário deletado com sucesso' });
-        }
-      });
-    });
-  }
+app.delete('/users/:id', (req, res) => {
+    const id = req.params.id;
+    User.findByIdAndDelete(id)
+        .then(() => {
+            res.send({ message: 'Usuário deletado com sucesso' });
+        })
+        .catch(err => {
+            res.status(500).send({ message: 'Erro ao deletar usuário' });
+        });
 });
 
 app.listen(3000, () => {
-  console.log('Servidor rodando na porta 3000');
+    console.log('Servidor rodando na porta 3000');
 });

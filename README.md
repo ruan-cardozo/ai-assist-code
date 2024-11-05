@@ -1,10 +1,10 @@
 
 # Atividade: Uso de Assistentes de Código com IA no Ciclo de Vida de Desenvolvimento
 
-## Ferramenta Escolhida: Codium
+## Ferramenta Escolhida: Codium e Refact.AI
 
 ### 1. Justificativa da Escolha
-A escolha da Codium se deu pelo fato de ela oferecer uma versão gratuita, sendo acessível para estudantes, além de estar posicionada no quadrante de desafiadoras do Gartner para Assistentes de Código com IA. Codium se destaca por seu foco em chat, interação com o desenvolvedor e geração de código, o que facilita o processo de automação no ciclo de vida de desenvolvimento.
+A escolha da Codium e Refact.AI se deu pelo fato de ela oferecer uma versão gratuita, sendo acessível para estudantes, além de estar posicionada no quadrante de desafiadoras do Gartner para Assistentes de Código com IA. Codium se destaca por seu foco em chat, interação com o desenvolvedor e geração de código, o que facilita o processo de automação no ciclo de vida de desenvolvimento.
 
 ### 2. Configuração do Ambiente
 A ferramenta foi configurada no ambiente de desenvolvimento **VSCODE**, com as seguintes etapas:
@@ -15,11 +15,6 @@ A ferramenta foi configurada no ambiente de desenvolvimento **VSCODE**, com as s
 
 #### 3.1 Especificação de Código
 Utilizamos a Codium para auxiliar na escrita de uma especificação para uma API CRUD básica. A ferramenta ajudou na geração automática de trechos de código e anotações sobre o comportamento esperado da API.
-
-Segue um print com código de retorno gerado:
-![alt text](image.png)
-
-![alt text](image-1.png)
 
 **Exemplo de Código Gerado:**
 ```javascript
