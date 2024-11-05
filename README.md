@@ -4,7 +4,7 @@
 ## Ferramenta Escolhida: Codium
 
 ### 1. Justificativa da Escolha
-A escolha da CodiumAI se deu pelo fato de ela oferecer uma versão gratuita, sendo acessível para estudantes, além de estar posicionada no quadrante de desafiadoras do Gartner para Assistentes de Código com IA. Codium se destaca por seu foco em chat, interação com o desenvolvedor e geração de código, o que facilita o processo de automação no ciclo de vida de desenvolvimento.
+A escolha da Codium se deu pelo fato de ela oferecer uma versão gratuita, sendo acessível para estudantes, além de estar posicionada no quadrante de desafiadoras do Gartner para Assistentes de Código com IA. Codium se destaca por seu foco em chat, interação com o desenvolvedor e geração de código, o que facilita o processo de automação no ciclo de vida de desenvolvimento.
 
 ### 2. Configuração do Ambiente
 A ferramenta foi configurada no ambiente de desenvolvimento **VSCODE**, com as seguintes etapas:
@@ -320,7 +320,7 @@ app.listen(3000, () => {
 Esses são apenas alguns exemplos de como você pode melhorar o seu CRUD em Node.js. Lembre-se de que a segurança e as boas práticas são fundamentais para criar um aplicativo robusto e escalável.
 
 #### 3.3 Verificação de Segurança
-A CodiumAI foi utilizada para identificar possíveis vulnerabilidades, como XSS e SQL Injection. 
+A Codium foi utilizada para identificar possíveis vulnerabilidades, como XSS e SQL Injection. 
 A seguir, são listadas as vulnerabilidades detectadas e as correções sugeridas:
 
 Aqui estão as vulnerabilidades que encontrei no código:
@@ -402,7 +402,7 @@ workflows:
 Documentamos as principais observações em cada etapa:
 - **Especificação de Código:** A ferramenta facilitou a geração inicial, economizando tempo.
 - **Qualidade de Código:** Foram aplicadas sugestões de refatoração que melhoraram a legibilidade e eficiência.
-- **Segurança:** A CodiumAI foi eficaz em detectar vulnerabilidades comuns e propor correções.
+- **Segurança:** A Codium foi eficaz em detectar vulnerabilidades comuns e propor correções.
 - **Programação Assistida:** O código gerado foi útil, mas exigiu algumas adaptações manuais para melhor adequação ao projeto.
     - **Vai ter retrabalho para o código que ele mesmo fez.** 
 - **Pipeline de CI/CD:** A ferramenta simplificou a configuração inicial, automatizando o processo de deploy com eficiência.
