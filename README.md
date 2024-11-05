@@ -480,12 +480,13 @@ Documentamos as principais observações em cada etapa:
 - **Pipeline de CI/CD:** A ferramenta simplificou a configuração inicial, automatizando o processo de deploy com eficiência.
 
 ### 5. Benefícios e Limitações da Ferramenta
-- **Benefícios:** Automação de tarefas repetitivas, detecção de vulnerabilidades, geração de código e sugestões de melhorias.
+- **Benefícios:** Automação de tarefas repetitivas, detecção de vulnerabilidades, geração de código e sugestões de melhorias, boas práticas de programação.
 - **Limitações:** Algumas sugestões geradas exigem revisão manual para adequação ao contexto do projeto e tambem correção manual nem sempre os códigos gerados por ele são os melhores e com as melhores práticas.
+- ****
 
 ### 6. Reflexão Crítica
-O uso da Codeium demonstrou um aumento significativo na produtividade, especialmente na fase de verificação de segurança e programação assistida. No entanto, percebemos a necessidade de revisão e ajuste do código gerado em certos cenários, o que ressalta a importância de uma supervisão humana contínua.
+O uso da Codeium e do RefactAI demonstrou um aumento significativo na produtividade, especialmente na fase de verificação de segurança e programação assistida. No entanto, percebemos a necessidade de revisão e ajuste do código gerado em certos cenários, o que ressalta a importância de uma supervisão humana contínua.
 
 ### 7. Conclusão
 
-A Codeium oferece uma excelente solução para automação de tarefas no ciclo de vida de desenvolvimento, com um foco em produtividade e segurança. O uso desta ferramenta pode auxiliar equipes de desenvolvimento a melhorar a qualidade e a segurança de seus projetos, desde que o código gerado seja revisado e ajustado conforme necessário.
+A Codeium e RefactAI oferece uma excelente solução para automação de tarefas no ciclo de vida de desenvolvimento, com um foco em produtividade e segurança. O uso desta ferramenta pode auxiliar equipes de desenvolvimento a melhorar a qualidade e a segurança de seus projetos, desde que o código gerado seja revisado e ajustado conforme necessário.
