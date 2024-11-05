@@ -16,7 +16,7 @@ A ferramenta foi configurada no ambiente de desenvolvimento **VSCODE**, com as s
 #### 3.1 Especificação de Código
 Utilizamos a Codeium para auxiliar na escrita de uma especificação para uma API CRUD básica. A ferramenta ajudou na geração automática de trechos de código e anotações sobre o comportamento esperado da API.
 
-**Exemplo de Código Gerado:**
+**Exemplo de Código Gerado com o Codeium:**
 ```javascript
 const express = require('express');
 const app = express();
@@ -109,7 +109,7 @@ A análise de uma base de código existente da disciplina de segurança foi real
 
 ##### Sugestão do Codeium
 
-Código utilizado para o Codeium fazer a analise:
+Código utilizado para o Codeium e RefactAI fazer a análise:
 
 ```javascript
 const express = require('express');
@@ -334,6 +334,60 @@ app.listen(3000, () => {
 
 Esses são apenas alguns exemplos de como você pode melhorar o seu CRUD em Node.js. Lembre-se de que a segurança e as boas práticas são fundamentais para criar um aplicativo robusto e escalável.
 
+#### Sugestão do RefactAI
+
+Para melhorar o CRUD em Node.js que você forneceu, aqui estão algumas sugestões de refatoração, segurança, boas práticas e qualidade de código:
+1. Uso de Prepared Statements
+Evite injeções de SQL utilizando prepared statements ao invés de concatenar strings diretamente nas queries. Isso melhora a segurança do seu código.
+2. Validação de Dados
+Utilize uma biblioteca como Joi ou express-validator para validar os dados de entrada. Isso ajuda a garantir que os dados recebidos estão no formato esperado.
+3. Hashing de Senhas
+Nunca armazene senhas em texto simples. Utilize uma biblioteca como bcrypt para hash de senhas antes de armazená-las no banco de dados.
+4. Tratamento de Erros
+Centralize o tratamento de erros em um middleware para evitar repetição de código e melhorar a legibilidade.
+5. Uso de Async/Await
+Certifique-se de que todas as funções assíncronas estão sendo tratadas corretamente com try/catch para capturar erros.
+6. Remoção de Console Logs
+Remova os console.log em produção ou utilize uma biblioteca de logging como winston para gerenciar logs de forma mais eficaz.
+7. Estrutura de Pastas
+Considere organizar seu código em diferentes arquivos e pastas (por exemplo, controllers, routes, models) para melhorar a manutenibilidade.
+8. CORS Configurado
+Se o seu aplicativo for acessado de diferentes origens, configure o CORS de forma mais restritiva, especificando quais origens são permitidas.
+9. Status HTTP Apropriados
+Certifique-se de que está retornando os códigos de status HTTP corretos para cada resposta.
+10. Documentação da API
+Considere usar uma ferramenta como Swagger para documentar sua API, facilitando o entendimento e uso por outros desenvolvedores.
+Exemplo de Refatoração
+Aqui está um exemplo de como você pode refatorar a rota de login para incluir algumas dessas melhorias:
+
+```javascript
+app.post('/api/login', async (req, res) => {
+	const { email, password } = req.body;
+
+	try {
+		const result = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
+		const user = result.rows[0];
+
+		if (!user) {
+			return res.status(404).send('User not found');
+		}
+
+		const isMatch = await bcrypt.compare(password, user.password);
+		if (!isMatch) {
+			return res.status(401).send('Invalid credentials');
+		}
+
+		const token = jwt.sign({ id: user.id }, 'your_jwt_secret', { expiresIn: '1h' });
+		res.status(200).send({ token, user });
+	} catch (err) {
+		console.error(err);
+		res.status(500).send('Server Error');
+	}
+});
+```
+
+Essas mudanças não apenas melhoram a segurança e a qualidade do código, mas também tornam o aplicativo mais robusto e fácil de manter.
+
 #### 3.3 Verificação de Segurança
 A Codeium foi utilizada para identificar possíveis vulnerabilidades, como XSS e SQL Injection etc... 
 
@@ -421,7 +475,7 @@ Documentamos as principais observações em cada etapa:
 - **Especificação de Código:** As ferramentas facilitam a geração inicial, economizando tempo. Porém as sugestão dão retrabalhos ainda precisam ser feitos alguns ajustes pontuais para que o código funcione.
 - **Qualidade de Código:** Foram aplicadas sugestões de refatoração que melhoraram a legibilidade e eficiência.
 - **Segurança:** A Codeium foi eficaz em detectar vulnerabilidades comuns e propor correções.
-- **Programação Assistida:** O código gerado foi útil, mas exigiu algumas adaptações manuais para melhor adequação ao projeto.
+- **Programação Assistida:** O código gerado foi útil, mas exigiu algumas adaptações manuais para melhor adequação ao projeto. Nem sem as sugestões são completas, e necessárias. O Chat geralmente é mais eficaz 
     - **Vai ter retrabalho para o código que ele mesmo fez.** 
 - **Pipeline de CI/CD:** A ferramenta simplificou a configuração inicial, automatizando o processo de deploy com eficiência.
 
