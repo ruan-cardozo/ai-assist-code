@@ -415,5 +415,5 @@ Documentamos as principais observações em cada etapa:
 O uso da Codium demonstrou um aumento significativo na produtividade, especialmente na fase de verificação de segurança e programação assistida. No entanto, percebemos a necessidade de revisão e ajuste do código gerado em certos cenários, o que ressalta a importância de uma supervisão humana contínua.
 
 ### 7. Conclusão
+
 A Codium oferece uma excelente solução para automação de tarefas no ciclo de vida de desenvolvimento, com um foco em produtividade e segurança. O uso desta ferramenta pode auxiliar equipes de desenvolvimento a melhorar a qualidade e a segurança de seus projetos, desde que o código gerado seja revisado e ajustado conforme necessário.
----
