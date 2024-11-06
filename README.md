@@ -476,7 +476,7 @@ Documentamos as principais observações em cada etapa:
 - **Qualidade de Código:** Foram aplicadas sugestões de refatoração que melhoraram a legibilidade e eficiência.
 - **Segurança:** A Codeium foi eficaz em detectar vulnerabilidades comuns e propor correções.
 - **Programação Assistida:** O código gerado foi útil, mas exigiu algumas adaptações manuais para melhor adequação ao projeto. Nem sem as sugestões são completas, e necessárias. O Chat geralmente é mais eficaz 
-    - **Vai ter retrabalho para o código que ele mesmo fez.** 
+    - **Vai ter retrabalho para o código que ele mesmo fez.** O Codeium detecta divergências no próprio código gerado, mostrando a fragilidade na criação de alguns códigos.
 - **Pipeline de CI/CD:** A ferramenta simplificou a configuração inicial, automatizando o processo de deploy com eficiência.
 
 ### 5. Benefícios e Limitações da Ferramenta
