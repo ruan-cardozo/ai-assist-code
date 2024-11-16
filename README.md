@@ -4,6 +4,9 @@
 ## Ferramenta Escolhida: Codeium e Refact.AI
 
 ### 1. Justificativa da Escolha
+
+Magic Quadrant: https://www.gartner.com/resources/808000/808075/Figure_1_Magic_Quadrant_for_AI_Code_Assistants.png?reprintKey=1-2IJXRJJ0
+
 A escolha da Codeium e Refact.AI se deu pelo fato de ambas oferecerem versões gratuitas, tornando-as acessíveis para estudantes, além de estarem posicionadas no quadrante de nicho do Gartner para Assistentes de Código com IA. Ambas se destacam por seu foco em chat, interação com o desenvolvedor e geração de código, facilitando o processo de automação no ciclo de vida de desenvolvimento. Além disso, uma das ferramentas é open source.
 
 - CodeiumAI: https://codeium.com/
