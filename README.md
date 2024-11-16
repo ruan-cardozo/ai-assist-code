@@ -1,20 +1,20 @@
 
 # Atividade: Uso de Assistentes de Código com IA no Ciclo de Vida de Desenvolvimento
 
-## Ferramenta Escolhida: Codium e Refact.AI
+## Ferramenta Escolhida: Codeium e Refact.AI
 
 ### 1. Justificativa da Escolha
-A escolha da Codium e Refact.AI se deu pelo fato de ela oferecer uma versão gratuita, sendo acessível para estudantes, além de estar posicionada no quadrante de desafiadoras do Gartner para Assistentes de Código com IA. Codium se destaca por seu foco em chat, interação com o desenvolvedor e geração de código, o que facilita o processo de automação no ciclo de vida de desenvolvimento.
+A escolha da Codeium e Refact.AI se deu pelo fato de ela oferecer uma versão gratuita, sendo acessível para estudantes, além de estar posicionada no quadrante de desafiadoras do Gartner para Assistentes de Código com IA. Codeium se destaca por seu foco em chat, interação com o desenvolvedor e geração de código, o que facilita o processo de automação no ciclo de vida de desenvolvimento.
 
 ### 2. Configuração do Ambiente
 A ferramenta foi configurada no ambiente de desenvolvimento **VSCODE**, com as seguintes etapas:
-- Instalação do plugin/extensão Codium na IDE.
+- Instalação do plugin/extensão Codeium/Refact.AI na IDE.
 - Verificação das funcionalidades de integração, como sugestões de código, análise de qualidade e verificação de segurança.
 
 ### 3. Tarefas Práticas
 
 #### 3.1 Especificação de Código
-Utilizamos a Codium para auxiliar na escrita de uma especificação para uma API CRUD básica. A ferramenta ajudou na geração automática de trechos de código e anotações sobre o comportamento esperado da API.
+Utilizamos a Codeium e Refact.AI para auxiliar na escrita de uma especificação para uma API CRUD básica. A ferramenta ajudou na geração automática de trechos de código e anotações sobre o comportamento esperado da API.
 
 **Exemplo de Código Gerado com o Codeium:**
 ```javascript
@@ -87,11 +87,11 @@ app.listen(3000, () => {
 ```
 
 #### 3.2 Qualidade de Código
-A análise de uma base de código existente da disciplina de segurança foi realizada com a Codium, que identificou melhorias de qualidade, como simplificação de métodos e refatoração. A ferramenta sugeriu boas práticas, que foram aplicadas.
+A análise de uma base de código existente da disciplina de segurança foi realizada com a Codeium e Refact.AI, que identificou melhorias de qualidade, como simplificação de métodos e refatoração. A ferramenta sugeriu boas práticas, que foram aplicadas.
 
 ##### Sugestão do Codeium
 
-Código utilizado para o codium fazer a analise:
+Código utilizado para o Codeium fazer a analise:
 
 ```javascript
 const express = require('express');
@@ -230,7 +230,7 @@ app.delete('/api/users/:id', async (req, res) => {
 
 Existem várias sugestões que posso fazer para melhorar o seu CRUD em Node.js em termos de refatoração, segurança e boas práticas. Aqui estão algumas delas:
 
-* Refatoração
+##### Refatoração
 
 Separe a lógica de negócios: Em vez de ter todo o código no arquivo server.js, separe a lógica de negócios em arquivos separados, como userController.js, userModel.js, etc.
 Use funções: Em vez de ter código inline, use funções para organizar o código e torná-lo mais reutilizável.
@@ -314,7 +314,7 @@ app.listen(3000, () => {
 
 Esses são apenas alguns exemplos de como você pode melhorar o seu CRUD em Node.js. Lembre-se de que a segurança e as boas práticas são fundamentais para criar um aplicativo robusto e escalável.
 
-#### Sugestão do RefactAI
+##### Sugestão do RefactAI
 
 Para melhorar o CRUD em Node.js que você forneceu, aqui estão algumas sugestões de refatoração, segurança, boas práticas e qualidade de código:
 1. Uso de Prepared Statements
@@ -369,7 +369,7 @@ app.post('/api/login', async (req, res) => {
 Essas mudanças não apenas melhoram a segurança e a qualidade do código, mas também tornam o aplicativo mais robusto e fácil de manter.
 
 #### 3.3 Verificação de Segurança
-A Codium foi utilizada para identificar possíveis vulnerabilidades, como XSS e SQL Injection. 
+A Codeium foi utilizada para identificar possíveis vulnerabilidades, como XSS e SQL Injection. 
 A seguir, são listadas as vulnerabilidades detectadas e as correções sugeridas:
 
 Aqui estão as vulnerabilidades que encontrei no código:
@@ -404,10 +404,10 @@ Aqui estão as vulnerabilidades que encontrei no código:
 Essas são apenas algumas das vulnerabilidades que encontrei no código. É importante lembrar que a segurança é um processo contínuo e que é necessário realizar auditorias e testes regulares para garantir a segurança do sistema.
 
 #### 3.4 Programação Assistida
-Codium foi utilizada para criar um novo recurso de crud de usuário sem autenticação via API. O que pode observar é o codigo gerado por ele não segue as própias melhorias que ele sugere quando é perguntado sobre melhorias no código.
+Utilizei a CodeiumAI para criar um novo recurso de CRUD de usuário sem autenticação via API. No entanto, observei que o código gerado pela ferramenta não segue as próprias sugestões de melhorias que ela faz quando questionada sobre possíveis otimizações. Essa inconsistência entre o código gerado e as recomendações fornecidas pela ferramenta pode impactar a qualidade final, exigindo uma revisão manual para alinhar o resultado com as melhores práticas sugeridas.
 
 #### 3.5 Criação de Pipeline de CI/CD
-Foi configurado um pipeline de CI/CD automático, incluindo as etapas de build, teste e deploy. A Codium gerou configurações automáticas para parte do processo, auxiliando na automação do deploy.
+Foi configurado um pipeline de CI/CD automatizado, abrangendo as etapas de build, teste e deploy. A CodeiumAI facilitou a geração dos scripts do pipeline, auxiliando na automação do processo de deploy. No entanto, a ferramenta oferece menos suporte quando se trata de integrar automaticamente o pipeline e configurar a plataforma de CI/CD, exigindo um esforço manual maior nessa parte.
 
 **Configuração do Pipeline:**
 ```yml
@@ -449,20 +449,20 @@ workflows:
 
 ### 4. Resultados Obtidos
 Documentamos as principais observações em cada etapa:
-- **Especificação de Código:** A ferramenta facilitou a geração inicial, economizando tempo.
+- **Especificação de Código:** As ferramentas facilitam a geração inicial, economizando tempo.
 - **Qualidade de Código:** Foram aplicadas sugestões de refatoração que melhoraram a legibilidade e eficiência.
-- **Segurança:** A Codium foi eficaz em detectar vulnerabilidades comuns e propor correções.
-- **Programação Assistida:** O código gerado foi útil, mas exigiu algumas adaptações manuais para melhor adequação ao projeto.
-    - **Vai ter retrabalho para o código que ele mesmo fez.** 
-- **Pipeline de CI/CD:** A ferramenta simplificou a configuração inicial, automatizando o processo de deploy com eficiência.
+- **Segurança:** A Codeium e o Refact.AI foram eficazes em detectar vulnerabilidades comuns e propor correções.
+- **Programação Assistida:** Os códigos gerados foram úteis, mas exigiu algumas adaptações manuais para melhor adequação ao projeto. Ponto importante é que o primeiro crud gerado com o Codeium não funcionava, e quando utilizada o Refact.AI ele corrigiu o código e começou a funcionar.
+    - O Codeium gerou inicialmente códigos que não funcionaram de maneira ideal e apresentaram falhas de execução. Embora a ferramenta seja valiosa para criar esboços iniciais rapidamente, poupando tempo, os códigos gerados muitas vezes não seguem boas práticas de desenvolvimento. Além disso, ao solicitar melhorias, o próprio Codeium sugere uma lista de ajustes, inclusive para o código que ele mesmo gerou, evidenciando que as soluções automáticas nem sempre são otimizadas desde o início. Os códigos gerados, em geral, precisam passar por algumas refatorações para que comecem a apresentar menos problemas e fiquem mais alinhados com padrões adequados de qualidade.
+- **Pipeline de CI/CD:** Foi configurado um pipeline de CI/CD automatizado, abrangendo as etapas de build, teste e deploy. A CodeiumAI facilitou a geração dos scripts do pipeline, auxiliando na automação do processo de deploy. No entanto, a ferramenta oferece menos suporte quando se trata de integrar automaticamente o pipeline e configurar a plataforma de CI/CD, exigindo um esforço manual maior nessa parte..
 
-### 5. Benefícios e Limitações da Ferramenta
+### 5. Benefícios e Limitações das Ferramentas
 - **Benefícios:** Automação de tarefas repetitivas, detecção de vulnerabilidades, geração de código e sugestões de melhorias.
-- **Limitações:** Algumas sugestões geradas exigem revisão manual para adequação ao contexto do projeto e tambem correção manual nem sempre os códigos gerados por ele são os melhores e com as melhores práticas.
+- **Limitações:** Algumas das sugestões geradas pelo Codeium exigem revisão manual para se adequar ao contexto específico do projeto, além de correções manuais, já que os códigos gerados nem sempre seguem as melhores práticas. Frequentemente, é necessário revisar o código e solicitar melhorias adicionais para garantir que ele se torne mais seguro e bem estruturado. Dessa forma, o uso da ferramenta exige uma supervisão constante para que o código final atenda aos padrões de qualidade esperados.
 
 ### 6. Reflexão Crítica
-O uso da Codium demonstrou um aumento significativo na produtividade, especialmente na fase de verificação de segurança e programação assistida. No entanto, percebemos a necessidade de revisão e ajuste do código gerado em certos cenários, o que ressalta a importância de uma supervisão humana contínua.
+O uso da Codium e do Refact.ai demonstrou um aumento significativo na produtividade, especialmente nas fases de verificação de segurança e programação assistida. No entanto, em ambos os casos, observamos a necessidade de revisão e ajustes no código gerado em certos cenários, o que ressalta a importância de uma supervisão humana contínua. Embora essas ferramentas ofereçam grande valor inicial, a qualidade final do código ainda depende de refinamentos manuais para garantir a conformidade com as melhores práticas e as necessidades específicas do projeto.
 
 ### 7. Conclusão
 
-A Codium oferece uma excelente solução para automação de tarefas no ciclo de vida de desenvolvimento, com um foco em produtividade e segurança. O uso desta ferramenta pode auxiliar equipes de desenvolvimento a melhorar a qualidade e a segurança de seus projetos, desde que o código gerado seja revisado e ajustado conforme necessário.
+A utilização das ferramentas Codeium e Refact.AI durante esta atividade demonstrou seu valor no ciclo de vida de desenvolvimento, proporcionando automação eficaz e auxiliando na melhoria da qualidade e segurança do código. O suporte à geração automática de código e análises de boas práticas simplificou tarefas repetitivas, otimizando o tempo dos desenvolvedores e reduzindo o risco de falhas. No entanto, é essencial que as equipes revisem e ajustem o código gerado conforme as necessidades do projeto, garantindo que ele siga os padrões de segurança e qualidade exigidos. Com a devida supervisão, essas ferramentas podem se tornar grandes aliadas no aumento da produtividade e na melhoria contínua dos processos de desenvolvimento.
