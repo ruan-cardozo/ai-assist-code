@@ -4,7 +4,12 @@
 ## Ferramenta Escolhida: Codeium e Refact.AI
 
 ### 1. Justificativa da Escolha
-A escolha da Codeium e Refact.AI se deu pelo fato de ela oferecer uma versão gratuita, sendo acessível para estudantes, além de estar posicionada no quadrante de desafiadoras do Gartner para Assistentes de Código com IA. Codeium se destaca por seu foco em chat, interação com o desenvolvedor e geração de código, o que facilita o processo de automação no ciclo de vida de desenvolvimento.
+A escolha da Codeium e Refact.AI se deu pelo fato de ambas oferecerem versões gratuitas, tornando-as acessíveis para estudantes, além de estarem posicionadas no quadrante de nicho do Gartner para Assistentes de Código com IA. Ambas se destacam por seu foco em chat, interação com o desenvolvedor e geração de código, facilitando o processo de automação no ciclo de vida de desenvolvimento. Além disso, uma das ferramentas é open source.
+
+- CodeiumAI: https://codeium.com/
+- Refact.AI(OPEN SOURCE): https://refact.ai/
+  - https://github.com/smallcloudai
+  - https://github.com/smallcloudai/refact-vscode
 
 ### 2. Configuração do Ambiente
 A ferramenta foi configurada no ambiente de desenvolvimento **VSCODE**, com as seguintes etapas:
